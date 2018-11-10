@@ -12,18 +12,20 @@
       <h1>WikiRace</h1>
     </div>
     <div class="form">
-      <form action="handleSubmit()" method="POST">
+      <form onsubmit="return handleSubmit()" id="mainForm">
         <ul class="formOptions">
           <li class="row">
+            <img class = "start_img" src = "Images/start.png" alt = "start"></img>
             <input type="text" id="start" name="Start" placeholder="Start"/>
             <input type="checkbox" id="startRand" name="RandomStart"/> <p>Random start</p>
           </li>
           <li class="row">
+            <img class = "finish_img" src = "Images/finish.png" alt = "finish"></img>
             <input type="end" id="end" name="End" placeholder="End"/>
             <input type="checkbox" id="endRand" name="RandomEnd" /><p>Random end</p>
           </li>
         </ul>
-        <input type="submit" value="Send" id="contact-form-send">
+        <input type="submit" value="Start" id="contact-form-send">
     </form>
     </div>
 
@@ -32,9 +34,7 @@
       <ul class="results"></ul>
     </div>
 
-    <div id="raceArea">
-      <iframe src="https://www.wikipedia.org/"><button> START </button> </iframe>
-    </div>
+    <div id="raceArea"></div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="script.js"></script>

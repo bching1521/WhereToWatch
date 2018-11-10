@@ -97,14 +97,35 @@ var stopwatch = new Stopwatch(
 document.querySelector('.stopwatch'),
 document.querySelector('.results'));
 
+function getRandomLine(filename){
+  fs.readFile(filename, function(err, data){
+    if(err) throw err;
+    var lines = data.split('\n');
+    var noun = lines[Math.floor(Math.random()*lines.length)];
+ })
+ return noun;
+}
+
 
 function handleSubmit(){
-  var start = document.getElementbyId('start').value;
-  var startRand = document.getElementbyId('startRand').value;
+  var start = document.getElementById("start").value;
+  var startRand = document.getElementById('startRand').checked;
+  var end = document.getElementById('end').value;
+  var endRand = document.getElementById('endRand').checked;
+  if(start == null || startRand.checked)
+  {
+    //must choose a random start value
+    start = getRandomLine("./nouns.txt");
 
-  var end = document.getElementbyId('end').value;
-  var endRand = document.getElementbyId('endRand').value;
+  }
+  if(end == null || endRand.checked)
+  {
+    //must choose a random end value
+    end = getRandomLine("./nouns.txt");
+  }
+  document.getElementById('raceArea').innerHTML = '<iframe style="width:90%; height: 600px; display: block; margin: 0 auto; margin-bottom: 100px;" src="https://en.wikipedia.org/wiki/' + start + '"></iframe>';
+  // document.getElementById(page).style.width = '90%;';
 
-
-  document.getElementbyId('').
+  stopwatch.start();
+  return false;
 }

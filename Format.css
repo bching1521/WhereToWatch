@@ -35,6 +35,24 @@ p
   text-align: center;
 }
 
+.start_img{
+    max-height: 40px;
+}
+
+.finish_img{
+    max-height: 50px;
+}
+
+input[type=submit]{
+    width: 50px;
+    width: 200px;
+    color: #f7f7f7;
+    display: block;
+    background: #9b0000;
+    font-size: 3em;
+    margin: 0 auto;
+}
+
 .raceArea
 {
   min-height: 700px;
