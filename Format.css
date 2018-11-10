@@ -1,4 +1,4 @@
-h1,h2,h3,h4,h5,p,span,input,textarea{
+h1,h2,h3,h4,h5,p,span,input,textarea, label{
   font-family: 'PT Sans', sans-serif;
 }
 /*----------------------Font sizing---------------------- */
@@ -27,20 +27,23 @@ p
 	font-size: 1em;
 }
 /* ----------------form-------------------------- */
+ul{
+  list-style: none;
+
+}
+
+
+
+body{
+    background: #dadfe1;
+}
+
 .timer
 {
   display: block;
   margin: 0 auto;
   font-size: 1.999em;
   text-align: center;
-}
-
-.start_img{
-    max-height: 40px;
-}
-
-.finish_img{
-    max-height: 50px;
 }
 
 input[type=submit]{
@@ -51,6 +54,43 @@ input[type=submit]{
     background: #9b0000;
     font-size: 3em;
     margin: 0 auto;
+    border: outset;
+    border-width: thick;
+    border-color: #9b0000;
+}
+
+input[type=submit]:hover{
+    width: 50px;
+    width: 200px;
+    color: #f7f7f7;
+    display: block;
+    background: #c5050c;
+    font-size: 3em;
+    margin: 0 auto;
+    border: outset;
+    border-width: thick;
+    border-color: #c5050c;
+}
+
+input[type=submit]:active{
+    width: 50px;
+    width: 200px;
+    color: #f7f7f7;
+    display: block;
+    background: #9b0000;
+    font-size: 3em;
+    margin: 0 auto;
+    border: inset;
+    border-width: thick;
+    border-color: #9b0000;
+}
+
+.start_img{
+    max-height: 40px;
+}
+
+.finish_img{
+    max-height: 50px;
 }
 
 .raceArea

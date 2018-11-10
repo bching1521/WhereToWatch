@@ -17,19 +17,19 @@
           <li class="row">
             <img class = "start_img" src = "Images/start.png" alt = "start"></img>
             <input type="text" id="start" name="Start" placeholder="Start"/>
-            <input type="checkbox" id="startRand" name="RandomStart"/> <p>Random start</p>
+            <label><input type="checkbox" id="startRand" name="RandomStart"/>Random start</label>
           </li>
           <li class="row">
             <img class = "finish_img" src = "Images/finish.png" alt = "finish"></img>
             <input type="end" id="end" name="End" placeholder="End"/>
-            <input type="checkbox" id="endRand" name="RandomEnd" /><p>Random end</p>
+            <label><input type="checkbox" id="endRand" name="RandomEnd" />Random end</label>
           </li>
         </ul>
         <input type="submit" value="Start" id="contact-form-send">
     </form>
     </div>
 
-    <div class="timer">
+    <div class="timer" id ="timer">
       <div class="stopwatch"></div>
       <ul class="results"></ul>
     </div>
