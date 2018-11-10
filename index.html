@@ -3,11 +3,38 @@
   <link href="Format.css" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <head>
-    <title></title>
-    <link rel="icon" type="image/ico" href="img/logo.png" >
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <title>WikiRace</title>
+    <link rel="icon" type="image/ico" href="img/logo.png">
   </head>
   <body>
+    <div class="hero">
+      <h1>WikiRace</h1>
+    </div>
+    <div class="form">
+      <form action="handleSubmit()" method="POST">
+        <ul class="formOptions">
+          <li class="row">
+            <input type="text" id="start" name="Start" placeholder="Start"/>
+            <input type="checkbox" id="startRand" name="RandomStart"/> <p>Random start</p>
+          </li>
+          <li class="row">
+            <input type="end" id="end" name="End" placeholder="End"/>
+            <input type="checkbox" id="endRand" name="RandomEnd" /><p>Random end</p>
+          </li>
+        </ul>
+        <input type="submit" value="Send" id="contact-form-send">
+    </form>
+    </div>
 
+    <div class="timer">
+      <div class="stopwatch"></div>
+      <ul class="results"></ul>
+    </div>
+
+    <div id="raceArea">
+      <iframe src="https://www.wikipedia.org/"><button> START </button> </iframe>
+    </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="script.js"></script>

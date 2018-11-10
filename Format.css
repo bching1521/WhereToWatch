@@ -1,1 +1,61 @@
-Format
+h1,h2,h3,h4,h5,p,span,input,textarea{
+  font-family: 'PT Sans', sans-serif;
+}
+/*----------------------Font sizing---------------------- */
+h1
+{
+	font-size:  3.998em ;
+}
+h2
+{
+	font-size:  2.827em ;
+}
+h3
+{
+	font-size: 1.999em ;
+}
+h4
+{
+	font-size: 1.414em ;
+}
+h5
+{
+	font-size:  1.21em ;
+}
+p
+{
+	font-size: 1em;
+}
+/* ----------------form-------------------------- */
+.timer
+{
+  display: block;
+  margin: 0 auto;
+  font-size: 1.999em;
+  text-align: center;
+}
+
+.raceArea
+{
+  min-height: 700px;
+}
+.raceArea iframe{
+  width: 90%;
+  height: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+html,body{
+  margin: 0;
+  padding:0;
+}
+
+footer{
+  background-color: #494949;
+  min-height: 500px;
+  display:inline-block;
+  vertical-align: top;
+  width: 100%;
+  min-height: 300px;
+}
