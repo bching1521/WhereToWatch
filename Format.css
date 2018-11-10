@@ -27,6 +27,15 @@ p
 	font-size: 1em;
 }
 /* ----------------form-------------------------- */
+
+body{
+    background: #dadfe1;
+}
+
+.heroTitle{
+    margin: 0 auto;
+}
+
 .timer
 {
   display: block;
