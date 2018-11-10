@@ -98,7 +98,8 @@ document.querySelector('.stopwatch'),
 document.querySelector('.results'));
 
 function getRandomLine(filename){
-  alert('in rangom');
+  alert("Inside random");
+  var fs = require("fs");
   var noun;
   fs.readFile(filename, function(err, data){
     if(err) throw err;
@@ -126,9 +127,27 @@ function handleSubmit(){
     //must choose a random end value
     end = getRandomLine("./nouns.txt");
   }
-  document.getElementById('raceArea').innerHTML = '<iframe style="width:90%; height: 600px; display: block; margin: 0 auto; margin-bottom: 100px;" src="https://en.wikipedia.org/wiki/' + start + '"></iframe>';
+  document.getElementById('raceArea').innerHTML = '<iframe id="currentSite" style="width:90%; height: 600px; display: block; margin: 0 auto; margin-bottom: 100px;" src="https://en.wikipedia.org/wiki/' + start + '"></iframe>';
   // document.getElementById(page).style.width = '90%;';
   document.getElementById("timer").scrollIntoView();
   stopwatch.start();
   return false;
+}
+
+window.setInterval(function(){
+  checkCorrect();
+}, 5000);
+
+function checkCorrect(){
+  var url = document.getElementById('currentSite');
+  var found = false;
+
+  //TODO need to check url is right.
+
+
+  if(found)
+  {
+    clearInterval();
+    alert("Success! Great job!");
+  }
 }
