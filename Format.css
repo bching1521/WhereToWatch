@@ -26,16 +26,17 @@ p
 {
 	font-size: 1em;
 }
-/* ----------------form-------------------------- */
-ul{
+/* ----------------form-------------------------- */ul{
   list-style: none;
 
 }
 
-
-
 body{
     background: #dadfe1;
+}
+
+.heroTitle{
+    margin: 0 auto;
 }
 
 .timer
