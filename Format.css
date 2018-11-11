@@ -51,6 +51,14 @@ body{
     padding-top: 30px;
 }
 
+.container2 {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    align-content: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
 .item{
     padding: 10px;
 }
