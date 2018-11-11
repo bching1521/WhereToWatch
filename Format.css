@@ -26,7 +26,9 @@ p
 {
 	font-size: 1em;
 }
-/* ----------------form-------------------------- */ul{
+/* ----------------form-------------------------- */
+
+li{
   list-style: none;
 
 }
@@ -65,6 +67,20 @@ body{
   font-size: 1.999em;
   text-align: center;
   padding-top: 30px;
+}
+
+input[type=text]{
+    height: 50px;
+    max-width: 250px;
+    font-size: 40px;
+}
+
+input[type=text]:hover{
+    background: #dadfe1;
+}
+
+input[type=text]:active{
+
 }
 
 input[type=submit]{
@@ -137,4 +153,5 @@ footer{
   vertical-align: top;
   width: 100%;
   min-height: 300px;
+  color: aliceblue;
 }
