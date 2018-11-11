@@ -37,11 +37,13 @@ body{
 
 .heroTitle{
     margin: 0 auto;
+    display: block;
+    text-align: center;
 }
 
 .container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 20% auto auto 20%;
     align-content: center;
     padding-bottom: 30px;
     padding-top: 30px;
