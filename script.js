@@ -98,13 +98,15 @@ document.querySelector('.stopwatch'),
 document.querySelector('.results'));
 
 function getRandomLine(filename){
-  alert("Inside random");
-  var fs = require("fs");
-  var list = new File(filename);
+  alert("inside");
+  var list = new File("./nouns.txt");
+  alert("after File");
   // fs.readFile(filename, function(err, data){
   //   if(err) throw err;
   var lines = list.split('\n');
+  alert("after split, before random");
   var noun = lines[Math.floor(Math.random()*lines.length)];
+  alert(noun);
 
  return noun;
 }
