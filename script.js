@@ -128,12 +128,21 @@ function handleSubmit(){
   endVal = document.getElementById('endsite').getAttribute('src').split('wiki/')[1];
 
   document.getElementById('raceArea').innerHTML = '<iframe id="currentSite" style="width:90%; height: 600px; display: block; margin: 0 auto; margin-bottom: 100px;" src="https://en.wikipedia.org/wiki/' + start + '"></iframe>';
-
+  displayData(start, end);
   // document.getElementById(page).style.width = '90%;';
   document.getElementById("timer").scrollIntoView();
   stopwatch.start();
   return false;
 }
+
+function displayData(start, end)
+{
+  var html = '<div class="startPoint" styles="display:block; grid-column: 1; text-align:center; margin: 0 auto;"><h5>Start: ' + start + '</h5></div>'
+  html += '<div class="endPoint" styles="display:block; grid-column: 2; text-align:center; margin: 0 auto;"><h5>End: ' + end + '</h5></div>'
+  document.getElementById("searchFor").innerHTML = html;
+}
+
+
 
 var myVar = setInterval(checkStatus, 2000);
 

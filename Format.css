@@ -129,7 +129,13 @@ html,body{
   margin: 0;
   padding:0;
 }
+#searchFor{
+  display:grid;
+  grid-template-columns: 30% 30%;
+  margin: 0 auto;
+  justify-content: center;
 
+}
 footer{
   background-color: #494949;
   min-height: 500px;
