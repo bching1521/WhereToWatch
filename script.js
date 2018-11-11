@@ -98,18 +98,25 @@ document.querySelector('.stopwatch'),
 document.querySelector('.results'));
 
 function getRandomLine(filename){
-  alert("Inside random");
+<<<<<<< HEAD
+  alert("inside");
+  var list = new File("./nouns.txt");
+  alert("after File");
+=======
   var fs = require("fs");
   var list = new File(filename);
+>>>>>>> 6e0d385ab687ec58a4e1f8025160b0f15625db47
   // fs.readFile(filename, function(err, data){
   //   if(err) throw err;
   var lines = list.split('\n');
+  alert("after split, before random");
   var noun = lines[Math.floor(Math.random()*lines.length)];
+  alert(noun);
 
  return noun;
 }
 
-
+var endVal = "";
 function handleSubmit(){
   var start = document.getElementById("start").value;
   var startRand = document.getElementById('startRand').checked;
@@ -119,35 +126,31 @@ function handleSubmit(){
   {
     //must choose a random start value
     start = getRandomLine("./nouns.txt");
-    alert(start);
-
   }
   if(end.length == 0 || endRand)
   {
     //must choose a random end value
     end = getRandomLine("./nouns.txt");
   }
+  document.getElementById('raceArea').innerHTML = '<iframe id="endsite" style="display:none;" src="https://en.wikipedia.org/wiki/' + end + '"></iframe>';
+  endVal = document.getElementById('endsite').getAttribute('src').split('wiki/')[1];
+
   document.getElementById('raceArea').innerHTML = '<iframe id="currentSite" style="width:90%; height: 600px; display: block; margin: 0 auto; margin-bottom: 100px;" src="https://en.wikipedia.org/wiki/' + start + '"></iframe>';
+
   // document.getElementById(page).style.width = '90%;';
   document.getElementById("timer").scrollIntoView();
   stopwatch.start();
   return false;
 }
 
-window.setInterval(function(){
-  checkCorrect();
-}, 5000);
+var myVar = setInterval(checkStatus, 2000);
 
-function checkCorrect(){
-  var url = document.getElementById('currentSite');
-  var found = false;
-
-  //TODO need to check url is right.
-
-
-  if(found)
+function checkStatus(){
+  var url = document.getElementById('currentSite').getAttribute('src');
+  if(url == "https://en.wikipedia.org/wiki/" + endVal)
   {
-    clearInterval();
+    clearInterval(myVar);
+    stopwatch.stop();
     alert("Success! Great job!");
   }
 }
