@@ -145,6 +145,9 @@ html,body{
   margin: 0;
   padding:0;
 }
+.stopwatch{
+  grid-column: 2;
+}
 #searchFor{
   display:grid;
   grid-template-columns: 30% 30%;
