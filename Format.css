@@ -37,6 +37,25 @@ body{
 
 .heroTitle{
     margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% auto auto 20%;
+    align-content: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.item{
+    padding: 10px;
+}
+
+.item-a{
+    padding: 10px;
+    margin: 0 auto;
 }
 
 .timer
@@ -45,6 +64,7 @@ body{
   margin: 0 auto;
   font-size: 1.999em;
   text-align: center;
+  padding-top: 30px;
 }
 
 input[type=submit]{
@@ -87,11 +107,11 @@ input[type=submit]:active{
 }
 
 .start_img{
-    max-height: 40px;
+    max-height: 100px;
 }
 
 .finish_img{
-    max-height: 50px;
+    max-height: 100px;
 }
 
 .raceArea

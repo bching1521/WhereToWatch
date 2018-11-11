@@ -99,12 +99,12 @@ document.querySelector('.results'));
 
 function getRandomLine(filename){
   var fs = require("fs");
-  var noun;
-  fs.readFile(filename, function(err, data){
-    if(err) throw err;
-    var lines = data.split('\n');
-    noun = lines[Math.floor(Math.random()*lines.length)];
- })
+  var list = new File(filename);
+  // fs.readFile(filename, function(err, data){
+  //   if(err) throw err;
+  var lines = list.split('\n');
+  var noun = lines[Math.floor(Math.random()*lines.length)];
+
  return noun;
 }
 
